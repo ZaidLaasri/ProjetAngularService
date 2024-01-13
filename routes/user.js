@@ -1,5 +1,4 @@
 let User = require("../model/user");
-const Assignment = require("../model/assignment");
 
 function authentification(req, res) {
     let nomUtilisateur = req.body.nomUtilisateur;
@@ -16,14 +15,15 @@ function authentification(req, res) {
             return;
         }
 
-        // Comparaison directe des mots de passe
         if (user.mdp === password) {
-            res.json({ message: 'Connexion réussie' });
+            // Inclure l'information admin dans la réponse
+            res.json({ message: 'Connexion réussie' + user.admin, admin: user.admin });
         } else {
             res.status(401).json({ error: 'Mot de passe incorrect' });
         }
     });
 }
+
 
 function getUser(req, res){
     let userId = req.params.id;
