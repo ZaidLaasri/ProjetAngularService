@@ -9,5 +9,4 @@ let UserSchema = Schema({
     admin: Boolean,
 });
 
-// C'est à travers ce modèle Mongoose qu'on pourra faire le CRUD
 module.exports = mongoose.model('User', UserSchema);

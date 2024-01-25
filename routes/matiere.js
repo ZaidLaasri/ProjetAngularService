@@ -1,5 +1,4 @@
 let Matiere = require("../model/matiere");
-const Assignment = require("../model/assignment");
 
 
 function getMatiers(req, res){

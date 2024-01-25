@@ -6,7 +6,6 @@ let EleveSchema = Schema({
     nom: String,
     numero: String,
 
-    // autres propriétés...
 },{ collection: 'eleve' });
 
 module.exports = mongoose.model('Eleve', EleveSchema);

@@ -73,6 +73,9 @@ app.route(prefix + '/matiere')
     .get(matiere.getMatiers)
 
 app.route(prefix + '/eleve')
+    .get(eleve.getEleves)
+
+app.route(prefix + '/eleve')
     .post(eleve.postEleve)
 
 // On démarre le serveur

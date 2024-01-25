@@ -7,10 +7,8 @@ let AssignmentSchema = Schema({
     nom: String,
     rendu: Boolean,
     note: Number,
-    matiere: Number,
-    eleve: Number,
+    matiere: { type: Schema.Types.ObjectId, ref: 'Matiere' },
+    eleve: { type: Schema.Types.ObjectId, ref: 'Eleve' },
 });
 
-
-// C'est à travers ce modèle Mongoose qu'on pourra faire le CRUD
 module.exports = mongoose.model('Assignment', AssignmentSchema);
